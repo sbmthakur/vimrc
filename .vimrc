@@ -11,9 +11,9 @@ inoremap <C-d> <Esc>:wq<CR>
 nnoremap <C-d> :wq<CR>
 inoremap <C-q> <Esc>:q!<CR>
 nnoremap <C-q> :q!<CR>
-"Yank full function block.
+"Yank full funcition block.
 nnoremap <F2> V%y
-"Delete full function block.
+"Delete full funcition block.
 nnoremap <F3> V%d
 "Copy a code block.
 nnoremap <F4> v%y 
