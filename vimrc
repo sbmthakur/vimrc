@@ -28,4 +28,16 @@ autocmd InsertLeave * :set relativenumber
 "auto reload vimrc when editing it
 autocmd! BufWritePost .vimrc source ~/.vimrc
 
+"For removing relative number in normal mode
+function! ToggleNumber()
+ if(&relativenumber == 1)
+	set norelativenumber
+ else 
+	set relativenumber
+ endif
+endfunc
+
+nnoremap <C-n> :call ToggleNumber()<cr>
+
+"set colors
 colors shubham
