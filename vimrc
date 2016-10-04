@@ -1,6 +1,7 @@
 set number
 set relativenumber
 set tabstop=4
+set dictionary=/usr/share/dict/words
 
 syntax on 
 
@@ -11,6 +12,7 @@ inoremap <C-d> <Esc>:wq<CR>
 nnoremap <C-d> :wq<CR>
 inoremap <C-q> <Esc>:q!<CR>
 nnoremap <C-q> :q!<CR>
+
 "Yank full function block.
 nnoremap <F2> V%y
 "Delete full function block.
@@ -19,6 +21,11 @@ nnoremap <F3> V%d
 nnoremap <F4> v%y 
 "Delete a block along with preceding code. For functions, loops etc.
 nnoremap <F5> v%d
+
+"Shift the current line down. Equivalent to sublime's Ctrl-Shift-down
+inoremap <C-j> <Esc>ddpi
+"Shift the current line up. Equivalent to sublime's Ctrl-Shift-up
+inoremap <C-k> <Esc>ddkPi
 
 "remove relative number when entering insert mode
 autocmd InsertEnter * :set norelativenumber
