@@ -22,10 +22,15 @@ nnoremap <F4> v%y
 "Delete a block along with preceding code. For functions, loops etc.
 nnoremap <F5> v%d
 
-"Shift the current line down. Equivalent to sublime's Ctrl-Shift-down
+"Shift the current line down(insert mode). Equivalent to sublime's Ctrl-Shift-down
 inoremap <C-j> <Esc>ddpi
-"Shift the current line up. Equivalent to sublime's Ctrl-Shift-up
+"Shift the current line up(insert mode). Equivalent to sublime's Ctrl-Shift-up
 inoremap <C-k> <Esc>ddkPi
+
+"Shift the current line down(normal mode). Equivalent to sublime's Ctrl-Shift-down
+nnoremap <C-j> ddp
+"Shift the current line up(normal mode). Equivalent to sublime's Ctrl-Shift-up
+nnoremap <C-k> ddkP
 
 "remove relative number when entering insert mode
 autocmd InsertEnter * :set norelativenumber
