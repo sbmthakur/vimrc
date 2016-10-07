@@ -3,7 +3,7 @@ set relativenumber
 set tabstop=4
 set dictionary=/usr/share/dict/words
 set laststatus=2
-set statusline=%t\ %m\ %R\ %y%=[%c,%l]%25(\ %)
+set statusline=%t\ %m\ %r\ %y%=[%c,%l]%25(\ %)
 syntax on 
 
 imap jk <Esc>
