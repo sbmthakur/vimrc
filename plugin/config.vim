@@ -1,5 +1,6 @@
 set number
 set relativenumber
+set path+=**
 set tabstop=4
 set dictionary=/usr/share/dict/words
 set laststatus=2
