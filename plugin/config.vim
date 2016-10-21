@@ -15,15 +15,6 @@ nnoremap <C-d> :wq<CR>
 inoremap <C-q> <Esc>:q!<CR>
 nnoremap <C-q> :q!<CR>
 
-"Yank full function block.
-nnoremap <F2> V%y
-"Delete full function block.
-nnoremap <F3> V%d
-"Copy a code block.
-nnoremap <F4> v%y 
-"Delete a block along with preceding code. For functions, loops etc.
-nnoremap <F5> v%d
-
 "Shift the current line down(insert mode). Equivalent to sublime's Ctrl-Shift-down
 inoremap <C-j> <Esc>ddpi
 "Shift the current line up(insert mode). Equivalent to sublime's Ctrl-Shift-up
