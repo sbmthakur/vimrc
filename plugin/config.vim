@@ -1,6 +1,7 @@
 set number
 set relativenumber
 set path+=**
+set incsearch
 set tabstop=4
 set dictionary=/usr/share/dict/words
 set laststatus=2
