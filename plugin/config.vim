@@ -1,3 +1,5 @@
+set nocompatible
+set title
 set number
 set relativenumber
 set path+=**
