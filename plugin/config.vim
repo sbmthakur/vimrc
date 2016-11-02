@@ -4,6 +4,7 @@ set number
 set relativenumber
 set path+=**
 set incsearch
+set hlsearch
 set tabstop=4
 set dictionary=/usr/share/dict/words
 set laststatus=2
@@ -17,7 +18,7 @@ inoremap <C-d> <Esc>:wq<CR>
 nnoremap <C-d> :wq<CR>
 inoremap <C-q> <Esc>:q!<CR>
 nnoremap <C-q> :q!<CR>
-
+nnoremap <F8> :noh<CR>
 "Shift the current line down(insert mode). Equivalent to sublime's Ctrl-Shift-down
 inoremap <C-j> <Esc>ddpi
 "Shift the current line up(insert mode). Equivalent to sublime's Ctrl-Shift-up
