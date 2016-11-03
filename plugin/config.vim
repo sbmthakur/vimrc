@@ -33,9 +33,24 @@ nnoremap <C-k> ddkP
 autocmd InsertEnter * :set norelativenumber
 "set relative number when leaving insert mode
 autocmd InsertLeave * :set relativenumber
-
 "auto reload vimrc when editing it
 autocmd! BufWritePost .vimrc source ~/.vimrc
+
+"""Bracket completion
+inoremap { <C-r>=CompleteBracket('{')<C-m><Esc>i
+inoremap [ <C-r>=CompleteBracket('[')<C-m><Esc>i
+inoremap ( <C-r>=CompleteBracket('(')<C-m><Esc>i
+
+function! CompleteBracket(leftBracket)
+  if a:leftBracket == '{'
+	return '{}'
+  elseif a:leftBracket == '['
+	return '[]'
+  else
+	return '()'
+  endif
+endfunction
+"""
 
 "For removing relative number in normal mode
 function! ToggleNumber()
