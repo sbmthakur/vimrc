@@ -20,6 +20,7 @@ nnoremap <C-d> :wq<CR>
 inoremap <C-q> <Esc>:q!<CR>
 nnoremap <C-q> :q!<CR>
 nnoremap <F8> :noh<CR>
+nnoremap <F9> :bd<CR>
 "Shift the current line down(insert mode). Equivalent to sublime's Ctrl-Shift-down
 inoremap <C-j> <Esc>ddpi
 "Shift the current line up(insert mode). Equivalent to sublime's Ctrl-Shift-up
