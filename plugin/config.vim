@@ -69,3 +69,7 @@ nnoremap <C-n> :call ToggleNumber()<cr>
 
 "set colors
 colors shubham
+
+if &diff
+    colorscheme diff
+endif
