@@ -10,6 +10,8 @@ set tabstop=2
 set dictionary=/usr/share/dict/words
 set laststatus=2
 set statusline=%t\ %m\ %r\ %y\ buffer:%n%=[%c,%l]%25(\ %)\ %p%%\ Lines:%L%5(\ %)
+set autoindent
+filetype plugin indent on 
 syntax on 
 
 imap jk <Esc>
@@ -44,6 +46,9 @@ autocmd! BufWritePost .vimrc source ~/.vimrc
 inoremap { <C-r>=CompleteBracket('{')<C-m><Esc>i
 inoremap [ <C-r>=CompleteBracket('[')<C-m><Esc>i
 inoremap ( <C-r>=CompleteBracket('(')<C-m><Esc>i
+
+nnoremap <S-l> gt<CR>
+nnoremap <S-h> gT<CR>
 
 function! CompleteBracket(leftBracket)
   if a:leftBracket == '{'
