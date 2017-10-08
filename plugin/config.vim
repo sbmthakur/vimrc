@@ -16,7 +16,10 @@ filetype plugin indent on
 runtime! ftplugin/man.vim
 syntax on 
 
+"Quickly switch to normal mode using `jk`. This will be removed once `xcape`
+"is installed on all my systems.
 imap jk <Esc>
+
 inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-s> :w<CR>
 inoremap <C-d> <Esc>:wq<CR>
