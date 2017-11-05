@@ -40,6 +40,8 @@ nnoremap <C-j> ddp
 "Shift the current line up(normal mode). Equivalent to sublime's Ctrl-Shift-up
 nnoremap <C-k> ddkP
 
+nnoremap ZA :qa<CR> 
+
 "remove relative number when entering insert mode
 autocmd InsertEnter * :set norelativenumber
 "set relative number when leaving insert mode
@@ -91,9 +93,6 @@ cnoremap <C-a>  <Home>
 cnoremap <C-b>  <Left>
 cnoremap <C-f>  <Right>
 cnoremap <C-d>  <Delete>
-cnoremap <M-b>  <S-Left>
-cnoremap <M-f>  <S-Right>
-cnoremap <M-d>  <S-right><Delete>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 "Thanks to https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
