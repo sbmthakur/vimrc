@@ -13,6 +13,7 @@ set laststatus=2
 set statusline=%t\ %m\ %r\ %y\ buffer:%n%=[%c,%l]%25(\ %)\ %p%%\ Lines:%L%5(\ %)
 set complete=.,w,b,u
 set autoindent
+set autochdir
 filetype plugin indent on 
 runtime! ftplugin/man.vim
 syntax on 
@@ -98,3 +99,8 @@ cnoremap <C-d>  <Delete>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 "Thanks to https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
 cmap w!! w !sudo tee > /dev/null %
+
+"Netrw settings
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 3
