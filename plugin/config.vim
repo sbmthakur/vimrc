@@ -96,6 +96,7 @@ cnoremap <C-b>  <Left>
 cnoremap <C-f>  <Right>
 cnoremap <C-d>  <Delete>
 
+nnoremap <C-t> :Texplore<CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 "Thanks to https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
 cmap w!! w !sudo tee > /dev/null %
