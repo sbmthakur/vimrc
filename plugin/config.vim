@@ -14,6 +14,7 @@ set statusline=%t\ %m\ %r\ %y\ buffer:%n%=[%c,%l]%25(\ %)\ %p%%\ Lines:%L%5(\ %)
 set complete=.,w,b,u
 set autoindent
 set autochdir
+set nofixendofline
 filetype plugin indent on 
 runtime! ftplugin/man.vim
 syntax on 
