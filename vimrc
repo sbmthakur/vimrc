@@ -1,4 +1,6 @@
 "You know what improves productivity in vim? Mastering motions and operators..." - Random Hacker News comment
+"execute pathogen#infect('~/.vim/bundle/{}')
+set sessionoptions-=options
 set nocompatible
 set title
 set number
@@ -15,9 +17,12 @@ set complete=.,w,b,u
 set autoindent
 set autochdir
 set nofixendofline
+set ignorecase
+set smartcase
+filetype off
+syntax on 
 filetype plugin indent on 
 runtime! ftplugin/man.vim
-syntax on 
 
 "Quickly switch to normal mode using `jk`. This will be removed once `xcape`
 "is installed on all my systems.
@@ -61,23 +66,23 @@ nnoremap <S-l> gt<CR>
 nnoremap <S-h> gT<CR>
 
 function! CompleteBracket(leftBracket)
-  if a:leftBracket == '{'
-	return '{}'
-  elseif a:leftBracket == '['
-	return '[]'
-  else
-	return '()'
-  endif
+        if a:leftBracket == '{'
+                return '{}'
+        elseif a:leftBracket == '['
+                return '[]'
+        else
+                return '()'
+        endif
 endfunction
 """
 
 "For removing relative number in normal mode
 function! ToggleNumber()
- if(&relativenumber == 1)
-	set norelativenumber
- else 
-	set relativenumber
- endif
+        if(&relativenumber == 1)
+                set norelativenumber
+        else 
+                set relativenumber
+        endif
 endfunc
 
 nnoremap <C-n> :call ToggleNumber()<cr>
@@ -86,7 +91,7 @@ nnoremap <C-n> :call ToggleNumber()<cr>
 colors shubham
 
 if &diff
-    colorscheme diff
+        colorscheme diff
 endif
 
 nmap j gj
@@ -106,3 +111,14 @@ cmap w!! w !sudo tee > /dev/null %
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 3
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
+"if !isdirectory("./.git/")
+"        autocmd vimenter * NERDTree
+"endif
+""map <C-N> :NERDTreeToggle<CR>
+
+"Go to last tab with <tt>
+let g:lasttab = 1
+nmap <Leader>tt :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
