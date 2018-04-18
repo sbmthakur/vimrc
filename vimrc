@@ -1,5 +1,5 @@
 "You know what improves productivity in vim? Mastering motions and operators..." - Random Hacker News comment
-"execute pathogen#infect('~/.vim/bundle/{}')
+execute pathogen#infect('~/.vim/bundle/{}')
 set sessionoptions-=options
 set nocompatible
 set title
