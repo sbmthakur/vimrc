@@ -172,3 +172,6 @@ endwhile
 
 " Copy stuff to clipboard 
 vnoremap <C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
+
+" For CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
