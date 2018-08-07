@@ -88,7 +88,7 @@ endfunc
 nnoremap <C-n> :call ToggleNumber()<cr>
 
 "set colors
-colors shubham
+colorscheme wombat
 
 if &diff
         colorscheme diff
