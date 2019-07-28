@@ -1,6 +1,7 @@
 "You know what improves productivity in vim? Mastering motions and operators..." - Random Hacker News comment
 execute pathogen#infect('~/.vim/bundle/{}')
 set sessionoptions-=options
+set shiftwidth=2
 set nocompatible
 set title
 set number
@@ -88,7 +89,7 @@ endfunc
 nnoremap <C-n> :call ToggleNumber()<cr>
 
 "set colors
-colorscheme wombat
+"colorscheme wombat
 
 if &diff
         colorscheme diff
