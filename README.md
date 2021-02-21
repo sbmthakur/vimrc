@@ -13,4 +13,4 @@ This repository contains code for my personal vim configuration. If you are thin
 ```
 https://gist.github.com/sbmthakur/1f3550c4fe2995b6af7e535e2e3cc637
 ```
-* To run the script on startup everytime, create a shorcut to `caps.ahk` in the Starup folder.
+* To run the script on startup everytime, create a shorcut to `caps.ahk` in the Startup folder.
