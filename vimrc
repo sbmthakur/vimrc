@@ -1,7 +1,7 @@
 "You know what improves productivity in vim? Mastering motions and operators..." - Random Hacker News comment
-execute pathogen#infect('~/.vim/bundle/{}')
 set sessionoptions-=options
-set shiftwidth=2
+#set shiftwidth=4 -- Set indentation to 2, useful for javascript 
+set autoindent expandtab tabstop=2 shiftwidth=2
 set nocompatible
 set title
 set number
@@ -10,7 +10,7 @@ set path+=**
 set incsearch
 set hlsearch
 set expandtab
-set tabstop=2
+set tabstop=4
 set dictionary=/usr/share/dict/words
 set laststatus=2
 set statusline=%t\ %m\ %r\ %y\ buffer:%n%=[%c,%l]%25(\ %)\ %p%%\ Lines:%L%5(\ %)
@@ -89,7 +89,7 @@ endfunc
 nnoremap <C-n> :call ToggleNumber()<cr>
 
 "set colors
-"colorscheme wombat
+colorscheme habamax
 
 if &diff
         colorscheme diff
@@ -120,41 +120,23 @@ let g:netrw_browse_split = 3
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 "if !isdirectory("./.git/")
-        "autocmd vimenter * NERDTree
 "endif
-""map <C-N> :NERDTreeToggle<CR>
-"NERDTree settings:
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | wincmd p | ene | exe 'NERDTree' argv()[0] | endif
 
-nnoremap <Leader>n :NERDTreeToggle<Enter>
-nnoremap <silent> <Leader>f :NERDTreeFind<Enter>
-let g:NERDTreeIgnore=['node_modules']
 
 "Go to last tab with <tt>
 let g:lasttab = 1
 nmap <Leader>tt :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
 
-let g:NERDTreeLimitedSyntax = 1
 " enable line numbers
-let NERDTreeShowLineNumbers=1
 " " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
 
-let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-let g:NERDTreeDisableExactMatchHighlight = 1
-let g:NERDTreeDisablePatternMatchHighlight = 1
-let g:NERDTreeSyntaxEnabledExtensions = ['c', 'h', 'c++','js', 'css', 'sql','sh','json']
 
-let g:NERDTreeHighlightCursorline = 0
 autocmd filetype nerdtree highlight javascript_icon ctermbg=none ctermfg=Red guifg=#ffa500
-autocmd filetype nerdtree syn match javascript_icon ## containedin=NERDTreeFile,html
 
 nnoremap <F5> :buffers<CR>:buffer<Space>
 nnoremap <Tab> :bnext<CR>
@@ -164,7 +146,6 @@ set wildchar=<Tab> wildmenu wildmode=full
 set wildcharm=<C-Z>
 nnoremap <F10> :b <C-Z>
 
-
 let c = 1
 while c <= 99
   execute "nnoremap " . c . "gb :" . c . "b\<CR>"
@@ -172,7 +153,12 @@ while c <= 99
 endwhile
 
 " Copy stuff to clipboard 
-vnoremap <C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
+" vnoremap <C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
+" vnoremap <C-c> :w !xclip -selection clipboard<CR><CR>
+vnoremap <C-c> "+y
+map <C-p> "+P
 
 " For CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+nnoremap <F2> :w<CR>
